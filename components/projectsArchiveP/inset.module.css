@@ -1,0 +1,19 @@
+.divider,
+.horizontalinset {
+  align-self: stretch;
+  box-sizing: border-box;
+}
+.horizontalinset {
+  height: var(--height-16);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-0) var(--padding-60);
+  opacity: var(--opacity-0_4);
+}
+.divider {
+  height: var(--height-1);
+  position: relative;
+  border-top: var(--border-1);
+}

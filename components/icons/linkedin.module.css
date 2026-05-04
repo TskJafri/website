@@ -1,0 +1,10 @@
+.linkedin {
+  height: var(--social-icon-size, 48px);
+  width: var(--social-icon-size, 48px);
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+}
+.icon {
+  object-fit: contain;
+}

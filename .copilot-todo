@@ -1,0 +1,4 @@
+- [x] Investigate `design` column layout causing downward shift.
+- [x] Reduce spacing within left design column so all content stays in view.
+- [x] Eliminate initial scroll movement by tightening sticky positioning.
+- [x] Keep year pill on one line by widening flex container.

@@ -1,0 +1,162 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- THIS IS THE MAIN FIX --- */
+/* This class now controls the whole left column */
+.design {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: clamp(18px, 3vh, 28px);
+  padding-bottom: clamp(18px, 3vh, 28px);
+  padding-right: clamp(18px, 3vh, 28px);
+  padding-left: 0;
+  margin-left: -20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  /* --- 1. THE FIX ---
+    REMOVED the main 'gap' property.
+    This lets us set custom spacing on each child element.
+  */
+  /* REMOVED: gap: clamp(var(--Spacing-3), 2vh, var(--Spacing-5)); */
+}
+
+/* --- THIS IS YOUR NAME STYLE --- */
+.yourName {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2.8rem, 3.2vw, 3.4rem);
+  color: var(--color-white);
+  text-align: left;
+  letter-spacing: 0.15px;
+  margin: 0;
+
+  /* --- 2. THE FIX ---
+    "a little more spacing"
+    (You can use a clamp() here too, or a static value)
+  */
+  margin-bottom: clamp(var(--Spacing-7), 1vh, var(--Spacing-8)); /* e.g., 1rem */
+}
+
+.tagline {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.6vw, 1.2rem);
+  line-height: 1.4;
+  color: var(--color-gray-300);
+
+  /* --- 3. THE FIX ---
+    "much more space"
+    (Using a larger value)
+  */
+  margin-bottom: clamp(var(--Spacing-5), 5vh, var(--Spacing-6)); /* e.g., 3rem */
+  /* margin-bottom: 2.5rem; Static value for more control */
+}
+
+.highlightSection {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-gray-300);
+  
+  /* --- 4. THE FIX ---
+    "a little less space"
+    (Using a smaller, static value. Your original clamp was fine, 
+    but this gives you more direct control if you want it smaller.)
+  */
+  gap: 0.5rem; /* Was: clamp(var(--Spacing-2), 1vh, var(--Spacing-3)) */
+}
+
+.highlightTitle {
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  line-height: 1.4;
+  letter-spacing: var(--Static-Title-Medium-Tracking);
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.highlightList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-2);
+}
+
+/* ... (No other changes are needed) ... */
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--Spacing-2);
+  font-size: var(--fs-14);
+  line-height: 1.6;
+  color: var(--color-gray-300);
+}
+
+.highlightBullet {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(248, 183, 115, 0.5);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.highlightBullet::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: #f8b773;
+}
+
+.highlightCopy {
+  display: block;
+}
+
+/* Icon row; tweak --social-icon-size to resize */
+.socialRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-20);
+  margin-top: auto; /* This correctly pushes it to the bottom */
+  padding-bottom: clamp(24px, 6vh, 72px);
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 6px;
+  transition: transform 0.2s ease, outline-color 0.2s ease;
+}
+
+.socialLink:hover {
+  transform: translateY(-2px);
+}
+
+.socialLink:focus-visible {
+  outline: 2px solid rgba(248, 183, 115, 0.6);
+  outline-offset: 4px;
+  transform: translateY(-2px);
+}
+
+.socialIcon {
+  --social-icon-size: 36px;
+}

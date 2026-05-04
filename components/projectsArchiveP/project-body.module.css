@@ -1,0 +1,219 @@
+.projectRow {
+  align-self: stretch;
+  padding: var(--padding-10) var(--padding-20) var(--padding-10)
+    var(--padding-32);
+  text-align: left;
+  font-size: var(--Static-Title-Medium-Size);
+  color: var(--color-gray-200);
+  font-family: var(--Static-Title-Medium-Font);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background-color: transparent;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    opacity 0.3s ease,
+    filter 0.3s ease;
+}
+
+.projectRow[data-has-details="true"] {
+  cursor: pointer;
+}
+
+.dimmed {
+  opacity: 0.35;
+  filter: saturate(0.6);
+}
+
+.projectRow[data-has-details="true"]:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.projectRow:focus-visible {
+  outline: 2px solid rgba(248, 183, 115, 0.55);
+  outline-offset: 4px;
+}
+
+.rowHeader {
+  display: grid;
+  grid-template-columns:
+    var(--archive-year-width)
+    minmax(0, 1fr)
+    var(--archive-madeat-width)
+    var(--archive-builtwith-width)
+    var(--archive-link-width);
+  column-gap: var(--archive-column-gap);
+  align-items: center;
+}
+
+.columnYear,
+.columnProject,
+.columnMadeAt,
+.columnTags,
+.columnLink {
+  min-width: 0;
+}
+
+.columnText,
+.projectTitle {
+  letter-spacing: var(--Static-Title-Medium-Tracking);
+  line-height: var(--Static-Title-Medium-Line-Height);
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.projectTitle {
+  color: var(--color-white);
+}
+
+.columnTags {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-10);
+  flex-wrap: wrap;
+  font-size: var(--fs-14);
+  color: var(--color-sandybrown-100);
+  font-family: var(--font-inter);
+}
+
+.tagPill {
+  border-radius: var(--br-20);
+  background-color: var(--color-sandybrown-200);
+  padding: var(--padding-5) var(--padding-20);
+  line-height: var(--lh-20);
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.columnLink {
+  color: var(--color-white);
+  padding-left: var(--archive-link-gap-extra);
+}
+
+.projectLink {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.projectLink:hover {
+  border-bottom-color: currentColor;
+}
+
+.projectDetails {
+  padding-left: calc(
+    var(--padding-32) + var(--archive-year-width) + var(--archive-column-gap)
+  );
+  padding-right: var(--padding-20);
+  color: var(--color-gray-200);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--Spacing-2);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.projectDetails[data-expanded="true"] {
+  max-height: 600px;
+}
+
+.detailList {
+  margin: 0;
+  padding-left: 0;
+  display: grid;
+  gap: var(--Spacing-2);
+  list-style: none;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-1);
+}
+
+.detailHeading {
+  display: flex;
+  align-items: center;
+  gap: var(--Spacing-2);
+}
+
+.bullet {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid rgba(248, 183, 115, 0.5);
+  flex-shrink: 0;
+}
+
+.bullet::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: #f8b773;
+}
+
+.detailTitle {
+  margin: 0;
+  font-size: var(--fs-14);
+  line-height: var(--lh-20);
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+.detailText {
+  color: var(--color-gray-300);
+  margin: 0;
+  font-size: var(--fs-14);
+  line-height: 1.6;
+  padding-left: calc(12px + var(--Spacing-2));
+}
+
+@media screen and (max-width: 768px) {
+  .projectRow {
+    padding: 16px var(--padding-20);
+  }
+
+  .rowHeader {
+    grid-template-columns:
+      var(--archive-year-width)
+      minmax(0, 1fr)
+      var(--archive-madeat-width);
+  }
+
+  .columnTags,
+  .columnLink {
+    display: none;
+  }
+
+  .projectDetails {
+    padding-left: calc(
+      var(--padding-20) + var(--archive-year-width) + var(--archive-column-gap)
+    );
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .rowHeader {
+    grid-template-columns:
+      var(--archive-year-width)
+      minmax(0, 1fr);
+  }
+
+  .columnMadeAt {
+    display: none;
+  }
+
+  .projectDetails {
+    padding-left: calc(var(--padding-20) + var(--archive-year-width));
+  }
+}

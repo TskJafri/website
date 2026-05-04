@@ -1,0 +1,13 @@
+.allProjects {
+  margin: 0;
+  height: 67px;
+  width: 220px;
+  position: relative;
+  font-size: inherit;
+  line-height: var(--Static-Headline-Large-Line-Height);
+  font-weight: 400;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}

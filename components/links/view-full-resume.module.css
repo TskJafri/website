@@ -1,0 +1,29 @@
+.viewFullResume {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--Spacing-2);
+  text-align: left;
+  font-size: var(--Static-Title-Medium-Size);
+  color: var(--color-white);
+  font-family: var(--Static-Title-Medium-Font);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.viewFullResume:hover,
+.viewFullResume:focus-visible {
+  color: var(--hover-color, #F8B773);
+  transform: translateY(-2px);
+}
+
+.viewFullResume:focus-visible {
+  outline: 2px solid var(--hover-color, #F8B773);
+  outline-offset: 4px;
+}
+
+.viewFullResume2 {
+  letter-spacing: var(--Static-Title-Medium-Tracking);
+  line-height: var(--Static-Title-Medium-Line-Height);
+  font-weight: 500;
+}

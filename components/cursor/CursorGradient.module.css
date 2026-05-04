@@ -1,0 +1,25 @@
+.gradient {
+  /* This is the gradient effect */
+  background: radial-gradient(
+    circle at center,
+    rgba(100, 200, 255, 0.2) -10%,
+    rgba(100, 200, 255, 0) 20%
+  );
+
+  /* Position it fixed to the viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  /* Set a large size */
+  width: 6000px;
+  height: 6000px;
+
+  /* This is the *most important* part.
+     This makes the div "click-through" so it
+     doesn't block clicks on links or buttons. */
+  pointer-events: none;
+
+  /* Make sure it's on top */
+  z-index: 9999;
+}

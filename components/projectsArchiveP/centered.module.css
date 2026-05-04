@@ -1,0 +1,124 @@
+.navbarCentered {
+  align-self: stretch;
+  height: var(--height-60);
+  background-color: var(--color-gray-100);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-8) var(--padding-32);
+  box-sizing: border-box;
+  gap: var(--gap-20);
+  text-align: center;
+  font-size: var(--fs-18);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+}
+.name,
+.nameWrapper {
+  width: var(--width-91);
+}
+.nameWrapper {
+  height: var(--height-28);
+  position: relative;
+}
+.name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--Spacing-2);
+}
+.favicon,
+.icon {
+  border-radius: var(--Border-Radius-rounded);
+}
+.icon {
+  height: var(--height-24);
+  width: var(--width-24);
+  position: relative;
+  flex-shrink: 0;
+}
+.favicon {
+  position: absolute;
+  height: 133.33%;
+  width: 100%;
+  top: -16.67%;
+  right: -16.67%;
+  bottom: -16.67%;
+  left: -16.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.launchUi {
+  position: relative;
+  line-height: var(--lh-28);
+  flex-shrink: 0;
+}
+.navbarCenteredInner {
+  height: 44px;
+  width: var(--width-621);
+  position: relative;
+  text-align: left;
+  font-size: var(--fs-14);
+}
+.menuitem,
+.menuitemParent {
+  display: flex;
+  align-items: center;
+}
+.menuitemParent {
+  position: absolute;
+  top: calc(50% - 22px);
+  left: calc(50% - 310.5px);
+  border-radius: var(--br-12);
+  border: 1px solid var(--border);
+  box-sizing: border-box;
+  width: var(--width-621);
+  padding: var(--Spacing-11);
+  gap: var(--Spacing-3);
+}
+.menuitem {
+  border-radius: var(--Border-Radius-rounded-md);
+  justify-content: center;
+  padding: var(--Spacing-21) var(--Spacing-4);
+}
+.navbarCenteredMenuitem {
+  position: relative;
+  line-height: var(--lh-20);
+  font-weight: 500;
+}
+.menuitem2 {
+  border-radius: var(--Border-Radius-rounded-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--Spacing-21) var(--Spacing-4);
+  gap: var(--Spacing-21);
+}
+.menuitem3 {
+  position: relative;
+  line-height: var(--lh-20);
+  font-weight: 500;
+}
+.chevronDownIcon,
+.menuitem3 {
+  flex-shrink: 0;
+}
+.chevronDownIcon,
+.navbarCenteredChevronDownIcon {
+  height: var(--height-12);
+  width: var(--width-12);
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 420px) {
+  .navbarCentered {
+    display: none;
+    gap: var(--gap-20);
+  }
+}

@@ -1,0 +1,8 @@
+.viewFullResume {
+  position: absolute;
+  top: 0;
+  left: 0;
+  letter-spacing: var(--Static-Title-Medium-Tracking);
+  line-height: var(--Static-Title-Medium-Line-Height);
+  font-weight: 500;
+}

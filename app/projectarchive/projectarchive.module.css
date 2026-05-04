@@ -1,0 +1,93 @@
+.projectarchive2Parent {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: var(--padding-10);
+}
+
+.bodyFrame,
+.projectarchive2 {
+  flex: 1;
+  background-color: var(--color-gray-100);
+}
+
+.projectarchive2 {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  font-size: var(--Static-Title-Medium-Size);
+  color: var(--color-white);
+  font-family: var(--Static-Title-Medium-Font);
+  box-sizing: border-box;
+}
+
+.bodyFrame {
+  justify-content: flex-start;
+  padding: var(--padding-0) var(--padding-10) var(--padding-10);
+}
+
+.bodyFrame,
+.textFrames,
+.viewFullResumeWrapper {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textFrames {
+  padding: var(--padding-0) var(--padding-10);
+  gap: var(--gap-10);
+}
+
+.viewFullResumeWrapper {
+  padding: var(--padding-0) var(--padding-40) var(--padding-0)
+    var(--padding-60);
+}
+
+.viewFullResume {
+  width: auto;
+  min-width: var(--width-130);
+  height: auto;
+  position: relative;
+}
+
+.heroLink {
+  font-size: clamp(18px, 2.2vw, 22px);
+  color: #f8b773;
+  font-weight: 600;
+}
+
+.heroLink:hover,
+.heroLink:focus-visible {
+  color: #f8b773;
+}
+
+.allProjectsWrapper,
+.projectbody {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+}
+
+.allProjectsWrapper {
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-40) var(--padding-0) var(--padding-60);
+  font-size: var(--Static-Headline-Large-Size);
+  font-family: var(--Static-Headline-Large-Font);
+}
+
+.projectbody {
+  flex: 0 1 auto;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-0) var(--padding-10) var(--padding-10);
+  gap: 2px;
+}

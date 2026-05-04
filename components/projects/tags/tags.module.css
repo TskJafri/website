@@ -1,0 +1,17 @@
+.tags {
+  border-radius: var(--br-20);
+  background-color: var(--color-sandybrown-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-5) var(--padding-20);
+  text-align: left;
+  font-size: var(--fs-14);
+  color: var(--color-sandybrown-100);
+  font-family: var(--font-inter);
+}
+.label {
+  position: relative;
+  line-height: var(--lh-20);
+  font-weight: 500;
+}

@@ -1,0 +1,125 @@
+.nabar,
+.name {
+  display: flex;
+  align-items: center;
+}
+.nabar {
+  align-self: stretch;
+  justify-content: center;
+  transform: translateX(+80px);
+  padding: var(--padding-10) 83px;
+  gap: var(--gap-20);
+  text-align: center;
+  font-size: var(--fs-18);
+  color: var(--foreground);
+  font-family: var(--font-inter);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(8px);
+}
+.name {
+  width: var(--width-91);
+  gap: var(--Spacing-2);
+}
+.launchUi {
+  position: sticky;
+  line-height: var(--lh-28);
+  flex-shrink: 0;
+}
+.favicon,
+.icon {
+  border-radius: var(--Border-Radius-rounded);
+}
+.icon {
+  height: var(--height-24);
+  width: var(--width-24);
+  position: relative;
+  flex-shrink: 0;
+}
+.favicon {
+  position: absolute;
+  height: 133.33%;
+  width: 100%;
+  top: -16.67%;
+  right: -16.67%;
+  bottom: -16.67%;
+  left: -16.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.menuitem,
+.menuitemParent {
+  display: flex;
+  align-items: center;
+}
+.menuitemParent {
+  width: var(--width-621);
+  border-radius: var(--br-12);
+  border: 1px solid var(--border);
+  box-sizing: border-box;
+  padding: var(--Spacing-11);
+  gap: var(--Spacing-3);
+  text-align: left;
+  font-size: var(--fs-14);
+}
+.menuitem {
+  border-radius: var(--Border-Radius-rounded-md);
+  justify-content: center;
+  padding: var(--Spacing-21) var(--Spacing-4);
+}
+.navItem {
+  cursor: pointer;
+}
+.navItem:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 4px;
+  border-radius: var(--Border-Radius-rounded-md);
+}
+.navItem:hover .nabarMenuitem,
+.navItem:focus-visible .nabarMenuitem {
+  color: #d2b99e;
+  font-weight: 600;
+}
+.activeNavItem .nabarMenuitem {
+  color: #d2b99e;
+  font-weight: 600;
+}
+.nabarMenuitem {
+  position: relative;
+  line-height: var(--lh-20);
+  font-weight: 300;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+.menuitem2 {
+  border-radius: var(--Border-Radius-rounded-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--Spacing-21) var(--Spacing-4);
+  gap: var(--Spacing-21);
+}
+.menuitem3 {
+  position: relative;
+  line-height: var(--lh-20);
+  font-weight: 300;
+}
+.chevronDownIcon,
+.menuitem3 {
+  flex-shrink: 0;
+}
+.chevronDownIcon,
+.nabarChevronDownIcon {
+  height: var(--height-12);
+  width: var(--width-12);
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 420px) {
+  .nabar {
+    display: none;
+    gap: var(--gap-20);
+  }
+}

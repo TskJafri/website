@@ -1,0 +1,6 @@
+.githubIcon {
+  height: var(--social-icon-size, 48px);
+  width: var(--social-icon-size, 48px);
+  position: relative;
+  object-fit: cover;
+}
