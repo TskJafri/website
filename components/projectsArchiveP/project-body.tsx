@@ -10,7 +10,7 @@ type ProjectDetail = {
 };
 
 type ProjectLink = {
-  label: string;
+  label?: string;
   href?: string;
 };
 

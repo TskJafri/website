@@ -11,10 +11,12 @@ export type DesignType = {
 };
 
 const highlights: ReactNode[] = [
+  <>Optimizing neutron transport problems and most importantly, verifying it!</>,
+  <>Simulating the melting points of unknown salts and verifying against limited known experimental data.</>,
   <>Undergraduate researcher in Sulc Lab focusing on computational methods in DNA nanotechnology.</>,
   <>4th place + $1000 winner in Honeywell Hacks for redesigning a turbofan radiator.</>,
   <>
-    <u>4x Dean&apos;s List</u> honoree for academic excellence in Applied Mathematics.
+    <u>6x Dean&apos;s List</u> honoree for academic excellence in Applied Mathematics.
   </>,
 ];
 

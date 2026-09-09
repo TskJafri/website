@@ -70,6 +70,11 @@ const Nabar: NextPage<NabarType> = ({ className = "", activeSection }) => {
       target: "blog",
       wrapperClass: styles.menuitem2,
     },
+    {
+      label: "My Resume",
+      href: "/Taskeen Jafri Resume.pdf",
+      wrapperClass: styles.menuitem2,
+    },
   ];
 
   return (
@@ -93,7 +98,7 @@ const Nabar: NextPage<NabarType> = ({ className = "", activeSection }) => {
 
       {/* This menu part remains */}
       <div className={styles.menuitemParent}>
-        {navItems.map(({ label, target, wrapperClass, textClass }) => {
+        {navItems.map(({ label, target, href, wrapperClass, textClass }) => {
           const isActive = activeSection === target;
           const itemClassName = [
             wrapperClass,
@@ -105,6 +110,24 @@ const Nabar: NextPage<NabarType> = ({ className = "", activeSection }) => {
           const textClassName = [styles.nabarMenuitem, textClass]
             .filter(Boolean)
             .join(" ");
+
+          if (href) {
+            return (
+              <a
+                key={href}
+                className={itemClassName}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span className={textClassName}>{label}</span>
+              </a>
+            );
+          }
+
+          if (!target) {
+            return null;
+          }
 
           return (
             <div

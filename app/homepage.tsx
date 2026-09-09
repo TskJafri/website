@@ -21,6 +21,35 @@ const Homepage: NextPage = () => {
   const [activeSection, setActiveSection] = useState<SectionId>("top");
   const experiencesItems = [
     {
+      year: "05/2026 — Present",
+      title: "Neutronics Simulation Intern • Serva Energy",
+      titleHref: "https://www.servaenergy.com/",
+      body: (
+        <>
+        Interning at a company that aims to <span className="text-bold">cure cancer through Nuclear Physics</span>, I improved the speed of the neutron transport code by <span className="text-bold">up to 50%</span> and optimized it. I also developed materials-science workflows to <span className="text-bold">predict the melting points</span> of rare compounds such as Radium Oxide (RaO) and related compounds, evaluating phase-coexistence and interface-pinning methods alongside DFT and convex-hull analysis.
+        </>
+      ),
+      tags: ["Neutron Transport", "Molecular Dynamics", "DFT"],
+      details: [
+        {
+          title: "August 2025",
+          text: "Investigated computational methods for predicting melting points. Initially implemented the phase-coexistence method, then transitioned to the interface-pinning method after evaluating the two approaches - still in progress, but much faster and theoretically just as accurate.",
+        },
+        {
+          title: "July 2025",
+          text: "Continued developing and maintaining the simulation software. Applied density functional theory (DFT) and convex-hull analysis to compounds with limited experimental data, generating computational estimates of material properties, including density, which would later help the company for R&D.",
+        },
+        {
+          title: "June 2025",
+          text: "Optimized several methods, reducing runtime by up to 50% for certain models. Redesigned data handling to partition workloads between memory and storage, shifting the primary bottleneck away from RAM and enabling simulations with orders of magnitude more steps.",
+        },
+        {
+          title: "May 2025",
+          text: "Joined the team and trained on the company's proprietary neutron transport simulation software, workflows and their objectives for production.",
+        },
+      ],
+    },
+    {
       year: "06/2025 — Present",
       title: "Undergraduate Research Aide • ASU",
       titleHref: "https://tjafri.com",
@@ -57,36 +86,36 @@ const Homepage: NextPage = () => {
       year: "05/2024 — 08/2025",
       title: "Mission Materials Archivist • ASU",
       body: (<>
-            Supported <span className="text-bold">NASA's Genesis mission</span> through ASU, focusing on 
-            solar wind particle data. I designed, built and maintained a <span className="text-bold">Python-based automation system</span> to manage and process the mission's archival data, dramatically improving the team's data handling efficiency.
+Supported <span className="text-bold">NASA&apos;s Genesis mission</span> through ASU, focusing on 
+          solar wind particle data. I designed, built and maintained a <span className="text-bold">Python-based automation system</span> to manage and process the mission&apos;s archival data, dramatically improving the team&apos;s data handling efficiency.
             
             {/* I was involved with the Genesis mission through ASU, launched by NASA, to measure solar wind particles. I also initiated and implemented a Python-based automation system for the archival process, significantly improving efficiency in handling the archival data. */}
             </>),
       tags: ["Python", "Data Processing", "RBS"],
       details: [
         {
-          title: "May 2024",
-          text: "Inventoried the flight samples, along with other samples used for related research.",
-        },
-        {
-          title: "June 2024",
-          text: "Created and automated the code for data processing and cleaning.",
-        },
-        {
-          title: "August 2024",
-          text: "Refined the processing and optimized the code to apply to a wider range.",
-        },
-        {
-          title: "September 2024",
-          text: "Applied the code to thousands of data files, saving over a hundred hours for my entire team.",
+          title: "April 2025",
+          text: "Expanded role to include Rutherford Backscattering Spectrometry (RBS) data analysis, contributing to deeper scientific research.",
         },
         {
           title: "January 2025",
           text: "Maintained and managed the code, updating it to handle more complex files.",
         },
         {
-          title: "April 2025",
-          text: "Expanded role to include Rutherford Backscattering Spectrometry (RBS) data analysis, contributing to deeper scientific research.",
+          title: "September 2024",
+          text: "Applied the code to thousands of data files, saving over a hundred hours for my entire team.",
+        },
+        {
+          title: "August 2024",
+          text: "Refined the processing and optimized the code to apply to a wider range.",
+        },
+        {
+          title: "June 2024",
+          text: "Created and automated the code for data processing and cleaning.",
+        },
+        {
+          title: "May 2024",
+          text: "Inventoried the flight samples, along with other samples used for related research.",
         },
       ],
     },
@@ -150,7 +179,7 @@ const Homepage: NextPage = () => {
       titleHref: "",
       description:
         (<>
-        As a researcher in ASU's IBeAM Lab, I gained hands-on experience with advanced scientific analysis and lab protocols. My role spanned from <span className="text-bold">hardware maintenance</span> on the ion beam accelerator to <span className="text-bold">data analysis</span> of particle scattering, using techniques like <span className="text-bold">Rutherford Backscattering Spectrometry (RBS)</span>.   
+        As a researcher in ASU&apos;s IBeAM Lab, I gained hands-on experience with advanced scientific analysis and lab protocols. My role spanned from <span className="text-bold">hardware maintenance</span> on the ion beam accelerator to <span className="text-bold">data analysis</span> of particle scattering, using techniques like <span className="text-bold">Rutherford Backscattering Spectrometry (RBS)</span>.   
         </>),
       details: [
       {
@@ -266,28 +295,32 @@ const Homepage: NextPage = () => {
   const blogItems = [
     {
       title: "Astronomy Club at ASU",
-      meta: "Head Event Coordinator • 2024 — Present",
+      meta: "Head Event Coordinator • 2024 — 2026",
       titleHref: undefined,
       details: [
         {
-          title: "March 2024",
-          text: (<>Became a telescope crew member, learnt to operate Celestrons, eVscope, Seestars, and more.</>),
+          title: "February 2026",
+          text: (<>Organized multiple events throughout the semester teaching more about astronomy and astrophotography to students, and organizing events in collaboration with other student clubs.</>),
         },
         {
-          title: "November 2024",
-          text: (<>Got elected as the <span className="text-bold">Vice President</span> for the club, and started planning, coordinating and organizing events.</>),
-        },
-        {
-          title: "February 2025",
-          text: (<>Re-election time. Due to time commitments, I ran and won for <span className="text-bold">Head Event Coordinator</span> for the club.</>),
+          title: "October 2025",
+          text: (<>Organized multiple outreach events, inside and outside ASU, which helped generate the club over <span className="text-bold">100 new members</span> in the span of a few months.</>),
         },
         {
           title: "April 2025",
           text: (<>Helped run and organize a NASA/JAXA conference at ASU, which earned the club <span className="text-bold">$5000</span> in funding for future events!</>),
         },
         {
-          title: "October 2025",
-          text: (<>Organized multiple outreach events, inside and outside ASU, which helped generate the club over <span className="text-bold">100 new members</span> in the span of a few months.</>),
+          title: "February 2025",
+          text: (<>Re-election time. Due to time commitments, I ran and won for <span className="text-bold">Head Event Coordinator</span> for the club.</>),
+        },
+        {
+          title: "November 2024",
+          text: (<>Got elected as the <span className="text-bold">Vice President</span> for the club, and started planning, coordinating and organizing events.</>),
+        },
+        {
+          title: "March 2024",
+          text: (<>Became a telescope crew member, learnt to operate Celestrons, eVscope, Seestars, and more.</>),
         },
       ],
       description:
@@ -309,7 +342,7 @@ const Homepage: NextPage = () => {
     },
     {
       title: "Volunteer",
-      meta: "2023 — Present",
+      meta: "2023 — 2026",
       titleHref: undefined,
       details: [
         {
@@ -448,7 +481,7 @@ const Homepage: NextPage = () => {
                 />
               ))}
             </section>
-            <ViewFullResume />
+            <ViewFullResume href="/Taskeen Jafri Resume.pdf" />
 
             <section
               className={`${styles.projectsSection} ${styles.anchorTarget}`}

@@ -1,5 +1,4 @@
 import "./global.css";
-import { ReactNode } from "react";
 import CursorGradient from "../components/cursor/CursorGradient";
 
 export const metadata = {
