@@ -72,7 +72,7 @@ const Nabar: NextPage<NabarType> = ({ className = "", activeSection }) => {
     },
     {
       label: "My Resume",
-      href: "/Taskeen Jafri Resume.pdf",
+      href: "/TaskeenJafriResume.pdf",
       wrapperClass: styles.menuitem2,
     },
   ];

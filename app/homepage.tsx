@@ -55,13 +55,37 @@ const Homepage: NextPage = () => {
       titleHref: "https://tjafri.com",
       body: (
         <>
-          At the Sulc Lab, I develop tools for <span className="text-bold">DNA origami</span>. 
-          My primary project is an <span className="text-bold">Evolutionary Model</span> (later to become a Reinforcement Learning model) 
-          that redesigns and optimizes DNA structure designs and simulations. I am also building a <span className="text-bold">JavaScript tool</span> to convert complex DNA file formats (<span className="text-bold">oxDNA to sCADnano</span>) and improve the research workflow.
+          At the Sulc Lab, I develop <span className="text-bold">computational tools</span> for <span className="text-bold">DNA origami</span>. 
+          My primary project is a <span className="text-bold">general-purpose algorithm</span> that identifies helices in relaxed DNA structures and reconstructs their underlying lattice organization, enabling structure analysis and clustering across research workflows. 
+          I have extended the system to support <span className="text-bold">wireframe structures</span>, developed mathematical methods for inferring inter-helix geometry, and evaluated graph-based optimization approaches including <span className="text-bold">Prim&apos;s, Kruskal&apos;s, Christofides&apos;, and 2-opt</span>.
         </>
       ),
       tags: ["Python", "DNA Research", "HPC"],
       details: [
+        {
+          title: "September 2026",
+          text: "Improved the pipeline's robustness across additional structures and edge cases while preparing the project and accompanying manuscript for publication.",
+        },
+        {
+          title: "August 2026",
+          text: "Implemented Kruskal's algorithm and evaluated Christofides and 2-opt approaches as alternative graph-based strategies within the lattice-reconstruction pipeline.",
+        },
+        {
+          title: "July 2026",
+          text: "Expanded the algorithm to support wireframe DNA origami structures and added configuration options that give designers greater control over structure processing and output.",
+        },
+        {
+          title: "May 2026",
+          text: "Developed mathematical methods for calculating angles between helices. Evaluated Prim's algorithm alongside multiple optimization strategies and loss functions to improve lattice reconstruction.",
+        },
+        {
+          title: "March 2026",
+          text: "Began experiments to infer lattice positions from relaxed DNA origami structures, extending the project beyond helix detection toward full lattice reconstruction.",
+        },
+        {
+          title: "January 2026",
+          text: "Refined and validated the helix-detection algorithm for use in researchers' relaxation, simulation, and structure-clustering workflows.",
+        },
         {
           title: "November 2025",
           text: (
@@ -481,7 +505,7 @@ Supported <span className="text-bold">NASA&apos;s Genesis mission</span> through
                 />
               ))}
             </section>
-            <ViewFullResume href="/Taskeen Jafri Resume.pdf" />
+            <ViewFullResume href="/TaskeenJafriResume.pdf" />
 
             <section
               className={`${styles.projectsSection} ${styles.anchorTarget}`}
